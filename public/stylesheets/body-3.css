@@ -185,6 +185,10 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   filter: alpha(opacity=75);
 }
 
+p.indent {
+  padding-left: 1em !important;
+}
+
 .contact-form {
   overflow: hidden;
   margin-bottom: -23px;
@@ -203,6 +207,10 @@ p {
 b {
   color: #999999 !important;
   font-weight: bold;
+}
+
+i {
+  font-style: oblique;
 }
 
 .font-helvetica, .main, .main .content .section h1, .main .content .main h1 {
@@ -1468,7 +1476,7 @@ div.ppt {
 .main .content .section, .main .content .main {
   position: relative;
   padding: 0 0 30px 0;
-  border-bottom: 1px dotted #efefef;
+  border-bottom: 1px dotted #c3b59d;
 }
 .main .content .section:last-child, .main .content .main:last-child {
   padding-bottom: 0;

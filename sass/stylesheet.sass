@@ -24,7 +24,8 @@
 html
 	margin: 0
 	padding: 0
-	overflow: hidden
+	background: #000 url(/images/bg-html.jpg) top center no-repeat
+
 
 body
 	//@extend .bg-gradient-primary
@@ -32,14 +33,43 @@ body
 	padding: 0
 	background: transparent
 
-.content
+#book
 	@extend .box
+	@extend .clearfix
 	position: relative
-	width: 960px
-	margin: 0 auto
-	padding: 0
-	color: $secondary-light
+	width: 1000px
+	height: 807px
+	margin: 60px auto 0
+	background: url(/images/bg-book.png) no-repeat
+	#left
+		@extend .page
+		margin: 25px 20px 20px 60px
+		#navigation
+			@extend .clearfix
+			height: 50px
+	#right
+		@extend .page
+		margin: 25px 20px 20px 40px
 	
+.page
+	@extend .box
+	@extend .clearfix
+	+float-left
+	clear: none
+	position: relative
+	width: 400px
+	height: 750px
+
+.content
+#left .content
+	height: 700px
+#right .content
+	height: 750px
+	
+.footer
+	background: #666
+	height: 50px
+
 			
 // INHERITED FORMATTING
 .text

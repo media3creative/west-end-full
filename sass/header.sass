@@ -8,42 +8,13 @@
 @import partials/color
 @import partials/corners
 
-#header
-	@extend .box
-	width: 100%
-	height: $header-height
-	margin: 0
-	padding: 0
-	border-bottom: 2px solid $header-border
-	.center
-		@extend .center-container
-		@extend .box
-		#logo1
-			@extend .box
-			position: absolute
-			top: (($header-height - $logoH)/2)
-			left: (5px	+ $v-gap)
-			margin: 0
-			a
-				display: block
-				margin: 0
-				padding: 0
-				&:hover
-					@extend .opaque
-				img
-					width: $logoW
-					height: $logoH
-					margin: 0
-					padding: 0
-					border: 0
-					background: transparent
-		
-			
 // NAVMENU
 ul#topnav
 	font-family: "EmbedFont-1"
-	+float-right
-	margin: 20px ($v-gap) 0 ($logoW + 5px + $h-gap)
+	+float-left
+	width: 100%
+	height: 50px
+	margin: 0
 	padding: 0
 	color: $nav-text
 	font-size: 11px
@@ -65,15 +36,18 @@ ul#topnav a.topnav
 	@extend .box
 	margin: 6px -1px 0 0
 	padding: .5em 2em .4em 2em
-	font-size: 13px
+	font-size: 10px
 	text-align: center
 	text-transform: uppercase
-	border-left: 1px solid $nav-lines
-	border-right: 1px solid $nav-lines
+	border: 1px dotted transparent
 
 ul#topnav li:hover a.topnav, ul#topnav li a.topnav:hover 
 	color: $nav-text-hover
 	background: $nav-bg
+	border-top: 1px dotted $nav-lines
+	border-right: 1px dotted transparent
+	border-bottom: 1px dotted $nav-lines
+	border-left: 1px dotted transparent
  
 ul#topnav li .sub 
 	@extend .corner-bottom
@@ -139,3 +113,8 @@ body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a
 .navigation-hover
 	//@extend .bg-gradient-secondary
 	color: $nav-text-hover
+	border-top: 1px dotted $nav-lines
+	border-right: 1px dotted transparent
+	border-bottom: 1px dotted $nav-lines
+	border-left: 1px dotted transparent
+	

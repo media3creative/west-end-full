@@ -185,6 +185,10 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   filter: alpha(opacity=75);
 }
 
+p.indent {
+  padding-left: 1em !important;
+}
+
 .contact-form {
   overflow: hidden;
   margin-bottom: -23px;
@@ -203,6 +207,10 @@ p {
 b {
   color: #999999 !important;
   font-weight: bold;
+}
+
+i {
+  font-style: oblique;
 }
 
 .font-helvetica, #slider-wrapper {

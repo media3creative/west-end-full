@@ -4,23 +4,14 @@
 
 %link{:href => "stylesheets/body-1.css", :media => "all", :rel => "stylesheet", :type => "text/css"}
 
-.body
-  .center
-    .content
-      .banner
-        .logo
-          %p.textcenter
-            %img{:src => "/images/logo.jpg", :alt => "West End Gastropub Logo"}
+- content_for :leftContent do
+  %h1 Left Content
   
-      .info-box
-        .text
-          %p
-            5320 Westheimer
-            %br
-            Houston, TX 77056
-            %br
-            713-590-0616
-            %br
-            %a{:href => "mailto:info@westendgastropub.com"}info@westendgastropub.com
-          %h3 Coming March 2012.
-    
+- content_for :leftFooter do
+  %h1 Left Footer
+
+- content_for :rightContent do
+  %h1 Right Content
+
+- content_for :rightFooter do
+  %h1 Right Footer

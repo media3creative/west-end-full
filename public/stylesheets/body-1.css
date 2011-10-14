@@ -146,16 +146,16 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   border-bottom-left-radius: 7px;
 }
 
-.clearfix, .body, .body .center, .info-box {
+.clearfix, .pageSection, .menuItem, .menuGroup {
   zoom: 1;
 }
-.clearfix:before, .body:before, .body .center:before, .info-box:before {
+.clearfix:before, .pageSection:before, .menuItem:before, .menuGroup:before {
   content: "\0020";
   display: block;
   height: 0;
   overflow: hidden;
 }
-.clearfix:after, .body:after, .body .center:after, .info-box:after {
+.clearfix:after, .pageSection:after, .menuItem:after, .menuGroup:after {
   content: "\0020";
   display: block;
   height: 0;
@@ -163,7 +163,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   clear: both;
 }
 
-.center-container, .body .center {
+.center-container {
   position: relative;
   width: 960px;
   height: 100%;
@@ -173,7 +173,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   background: url(/images/contBG.png) repeat-y;
 }
 
-.box, .center-container, .body .center, .body, .banner, .info-box, .info-box .text {
+.box, .center-container, .pageSection, .menuItem, .menuItem .name, .menuItem .price, .menuItem .description, .menuGroup, .menuGroup .groupName, .menuGroup .name, .menuGroup .price {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
@@ -183,6 +183,10 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
 .opaque {
   opacity: 0.75;
   filter: alpha(opacity=75);
+}
+
+p.indent {
+  padding-left: 1em !important;
 }
 
 .contact-form {
@@ -203,6 +207,10 @@ p {
 b {
   color: #999999 !important;
   font-weight: bold;
+}
+
+i {
+  font-style: oblique;
 }
 
 .font-helvetica {
@@ -353,63 +361,139 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   border-bottom-left-radius: 7px;
 }
 
-.body {
-  position: relative;
+.pageTitle {
   width: 100%;
-  margin: 0 auto;
+  margin: 0 0 10px 0;
+  padding: 0 0 3px 0;
+  border-bottom: 1px solid #c3b59d;
 }
-.body .center {
-  height: 1200px;
-  padding: 15px 0;
-}
-.body .center .content {
-@extent .box;
-  width: 900px;
-  margin: 0 auto;
-  padding: 0;
-}
-
-.banner {
-  margin: 40px 0 0 0;
-}
-.banner .logo p.textcenter {
-  text-align: center;
-}
-.banner .logo p.textcenter img {
-  width: 600px;
-  height: 140px;
-}
-
-.info-box {
-  width: 100%;
-  margin: 40px 0 0 0;
-}
-.info-box .text {
-  position: relative;
-  font-family: "EmbedFont-1";
+.pageTitle h1 {
   margin: 0;
-  color: black;
+  padding: 0;
+  font-family: "EmbedFont-3";
+  font-size: 20px;
+  font-weight: 100;
+  text-transform: uppercase;
   text-align: center;
 }
-.info-box .text h3 {
-  font-family: "EmbedFont-3";
-  margin: 0 0 1em 0;
-  padding-right: 3px;
-  font-size: 20px;
-  line-height: 22px;
+
+.pageSection {
+  margin-bottom: 10px;
+  padding-bottom: 7px;
+  border-bottom: 1px dotted #c3b59d;
+}
+.pageSection:last-child {
+  border-bottom: 0;
+}
+.pageSection h2 {
+  margin: 8px 0;
+  padding: 0;
+  font-family: "EmbedFont-1";
+  font-size: 15px;
+  font-weight: 100;
   text-transform: uppercase;
-  word-spacing: 0.1em;
-  letter-spacing: 0.05em;
+  text-align: left;
 }
-.info-box .text p {
-  padding-right: 3px;
-  font-size: 14px;
-  line-height: 1.3em;
+
+.menuItem {
+  margin: 5px 0 0 0;
 }
-.info-box .text p a {
-  color: #999999;
+.menuItem .name {
+  display: inline;
+  float: left;
+  clear: left;
+  width: 300px;
+  height: 15px;
+  margin: 0;
 }
-.info-box .text p a:hover {
-  color: black;
-  text-decoration: none;
+.menuItem .name h4 {
+  margin: 0;
+  padding: 0;
+  font-family: "EmbedFont-3";
+  font-size: 11px;
+  font-weight: 100;
+  text-align: left;
+}
+.menuItem .price {
+  display: inline;
+  float: left;
+  clear: right;
+  width: 30px;
+  height: 15px;
+  margin: 0;
+}
+.menuItem .price p {
+  margin: 0;
+  padding: 0;
+  font-family: "EmbedFont-3";
+  font-size: 11px;
+  font-weight: 100;
+  text-align: left;
+}
+.menuItem .description {
+  display: inline;
+  float: left;
+  clear: left;
+  width: 100%;
+  margin: 0;
+}
+.menuItem .description p {
+  margin: 0;
+  padding: 0;
+  font-family: "EmbedFont-1";
+  font-size: 10px;
+  font-weight: 100;
+  text-align: left;
+}
+
+.menuGroup {
+  margin: 5px 0 0 0;
+}
+.menuGroup .groupName {
+  display: inline;
+  float: left;
+  clear: left;
+  width: 100%;
+  height: 15px;
+  margin: 0;
+}
+.menuGroup .groupName h4 {
+  margin: 0;
+  padding: 0;
+  font-family: "EmbedFont-3";
+  font-size: 11px;
+  font-weight: 100;
+  text-align: left;
+}
+.menuGroup .name {
+  display: inline;
+  float: left;
+  clear: left;
+  width: 300px;
+  height: 15px;
+  margin: 0;
+}
+.menuGroup .name p {
+  margin: 0;
+  padding: 0 2em 0 0;
+  font-family: "EmbedFont-1";
+  font-size: 10px;
+  font-weight: 100;
+  text-align: left;
+}
+.menuGroup .price {
+  display: inline;
+  float: left;
+  clear: right;
+  width: 60px;
+  height: 15px;
+  margin: 0;
+}
+.menuGroup .price p {
+  margin: 0;
+  padding: 0;
+  font-family: "EmbedFont-1";
+  font-size: 10px;
+  font-weight: 100;
+  text-align: left;
 }

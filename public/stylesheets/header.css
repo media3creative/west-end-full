@@ -163,7 +163,7 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   clear: both;
 }
 
-.center-container, #header .center {
+.center-container {
   position: relative;
   width: 960px;
   height: 100%;
@@ -173,16 +173,20 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   background: url(/images/contBG.png) repeat-y;
 }
 
-.box, .center-container, #header .center, #header, #header .center #logo1, ul#topnav a.topnav, ul#topnav .sub ul li a {
+.box, .center-container, ul#topnav a.topnav, ul#topnav .sub ul li a {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -ms-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-.opaque, #header .center #logo1 a:hover {
+.opaque {
   opacity: 0.75;
   filter: alpha(opacity=75);
+}
+
+p.indent {
+  padding-left: 1em !important;
 }
 
 .contact-form {
@@ -203,6 +207,10 @@ p {
 b {
   color: #999999 !important;
   font-weight: bold;
+}
+
+i {
+  font-style: oblique;
 }
 
 .font-helvetica {
@@ -353,40 +361,15 @@ h1::-moz-selection, h2::-moz-selection, h3::-moz-selection, h4::-moz-selection, 
   border-bottom-left-radius: 7px;
 }
 
-#header {
-  width: 100%;
-  height: 80px;
-  margin: 0;
-  padding: 0;
-  border-bottom: 2px solid black;
-}
-#header .center #logo1 {
-  position: absolute;
-  top: 15px;
-  left: 35px;
-  margin: 0;
-}
-#header .center #logo1 a {
-  display: block;
-  margin: 0;
-  padding: 0;
-}
-#header .center #logo1 a img {
-  width: 200px;
-  height: 50px;
-  margin: 0;
-  padding: 0;
-  border: 0;
-  background: transparent;
-}
-
 ul#topnav {
   font-family: "EmbedFont-1";
   display: inline;
-  float: right;
-  margin: 20px 30px 0 235px;
+  float: left;
+  width: 100%;
+  height: 50px;
+  margin: 0;
   padding: 0;
-  color: #999999;
+  color: #444444;
   font-size: 11px;
   letter-spacing: 0.05em;
   list-style: none;
@@ -410,16 +393,19 @@ ul#topnav li a {
 ul#topnav a.topnav {
   margin: 6px -1px 0 0;
   padding: 0.5em 2em 0.4em 2em;
-  font-size: 13px;
+  font-size: 10px;
   text-align: center;
   text-transform: uppercase;
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  border: 1px dotted transparent;
 }
 
 ul#topnav li:hover a.topnav, ul#topnav li a.topnav:hover {
   color: black;
   background: transparent;
+  border-top: 1px dotted #c3b59d;
+  border-right: 1px dotted transparent;
+  border-bottom: 1px dotted #c3b59d;
+  border-left: 1px dotted transparent;
 }
 
 ul#topnav li .sub {
@@ -487,4 +473,8 @@ ul#topnav .sub ul li h2 {
 
 .navigation-hover, body.one a#one, body.two a#two, body.five a#five, body.four a#four, body.three a#three {
   color: black;
+  border-top: 1px dotted #c3b59d;
+  border-right: 1px dotted transparent;
+  border-bottom: 1px dotted #c3b59d;
+  border-left: 1px dotted transparent;
 }
